@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <!-- bootstrap css -->
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+ <!-- main css -->
+ <link rel="stylesheet" href="css/main.css">
+ <!-- google fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
+ <!-- font awesome -->
+ <link rel="stylesheet" href="css/all.css">
+ <title>budget app</title>
+ <style>
+ </style>
+</head>
+
+<body>
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-11 mx-auto pt-3">
+    <!-- title -->
+    <div class="titles" >
+        <img src="https://o.remove.bg/downloads/5c9db4f4-6be1-43fd-a97b-638d2144cfc9/1519952378344-removebg-preview.png" width="70" height="70" alt="" >
+    <h3 class="text-uppercase mb-4">Budget Tracker App</h3>
+
+    <form action="page/new.html" target="_blank">
+        <button>Переход по ссылке</button>
+        <form action="page/new.html" target="_blank">
+            <button>Переход по ссылке</button>
+   
+            <a href="https://www.eliftech.com/" class="text-uppercase mb-5"><h4>ElifTech</h4></a>
+</div>
+    <div class="row">
+     <div class="col-md-5 my-3">
+      <!-- budget feedback -->
+      <div class="budget-feedback alert alert-danger text-capitalize">budget feedback</div>
+      <!-- budget form -->
+      <form id="budget-form" class=" budget-form">
+       
+       <div class="form-group">
+        <input type="number" class="form-control budget-input" id="budget-input" placeholder="Enter your budget">
+       </div>
+       <!-- submit button -->
+       <button type="submit" class="btn text-capitalize budget-submit" id="budget-submit">Submit</button>
+      </form>
+     </div>
+     <div class="col-md-7">
+      <!-- app info -->
+      <div class="row my-3">
+       <div class="col-4 text-center mb-2">
+        <h6 class="text-uppercase info-title">Budget</h6>
+        <span class="budget-icon"><i class="fas fa-money-bill-alt"></i></span>
+        <h4 class="text-uppercase mt-2 budget" id="budget"><span>$ </span><span id="budget-amount">0</span></h4>
+       </div>
+       <div class="col-4 text-center">
+        <h6 class="text-uppercase info-title">Expenses</h6>
+        <span class="expense-icon"><i class="far fa-credit-card"></i></span>
+        <h4 class="text-uppercase mt-2 expense" id="expense"><span>$ </span><span id="expense-amount">0</span></h4>
+       </div>
+       <div class="col-4 text-center">
+        <h6 class="text-uppercase info-title">Balance</h6>
+        <span class="balance-icon"><i class="fas fa-dollar-sign"></i></span>
+        <h4 class="text-uppercase mt-2 balance" id="balance"> <span>$ </span><span id="balance-amount">0</span></h4>
+       </div>
+      </div>
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="col-md-5 my-3">
+      <!-- expense feedback -->
+      <div class="expense-feedback alert alert-danger text-capitalize">expense feedback</div>
+      <!-- expense form -->
+      <form id="expense-form" class=" expense-form">
+       <div class="form-group">
+        <input type="text" class="form-control expense-input" id="expense-input"placeholder="Category">
+       </div>
+       <div class="form-group">
+        <input type="number" class="form-control expense-input" id="amount-input" placeholder="Spent Amount ($)">
+       </div>
+       <!-- submit button -->
+       <button type="submit" class="btn text-capitalize expense-submit" id="expense-submit">Create Entry</button>
+      </form>
+     </div>
+     <div class="col-md-7 my-3">
+      <!-- expense list -->
+      <div class="expense-list" id="expense-list">
+
+       <div class="expense-list__info d-flex justify-content-between text-capitalize">
+        <h5 class="list-item">expense title</h5>
+        <h5 class="list-item">expense value</h5>
+        <h5 class="list-item"></h5>
+       </div>
+
+       <table id="calendar3">
+        <thead>
+          <tr><td colspan="4"><select>
+      <option value="0">Январь</option>
+      <option value="1">Февраль</option>
+      <option value="2">Март</option>
+      <option value="3">Апрель</option>
+      <option value="4">Май</option>
+      <option value="5">Июнь</option>
+      <option value="6">Июль</option>
+      <option value="7">Август</option>
+      <option value="8">Сентябрь</option>
+      <option value="9">Октябрь</option>
+      <option value="10">Ноябрь</option>
+      <option value="11">Декабрь</option>
+      </select><td colspan="3"><input type="number" value="" min="0" max="9999" size="4">
+          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+        <tbody>
+      </table>
+
+       <!-- calendar -->
+        <!-- <div class="calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FKiev&amp;src=a2xtMm8wZ2t1bWpqbTloZGx2ZWc1a21xcjhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23F09300&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1" style="border-width:0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+        </div> -->  
+       <!-- single expense -->
+
+       <!-- <div class="expense">
+        <div class="expense-item d-flex justify-content-between align-items-baseline">
+
+         <h6 class="expense-title mb-0 text-uppercase list-item">- title</h6>
+         <h5 class="expense-amount mb-0 list-item">amount</h5>
+
+         <div class="expense-icons list-item">
+
+          <a href="#" class="edit-icon mx-2" data-id="${expense.id}">
+           <i class="fas fa-edit"></i>
+          </a>
+          <a href="#" class="delete-icon" data-id="${expense.id}">
+           <i class="fas fa-trash"></i>
+          </a>
+         </div>
+        </div>
+
+       </div> -->
+
+       <!-- end of single expense -->
+
+      </div>
+     </div>
+    </div>
+
+
+
+
+   </div>
+  </div>
+ </div>
+
+
+
+
+ <!-- jquery -->
+ <script src="js/jquery-3.3.1.min.js"></script>
+ <!-- bootstrap js -->
+ <script src="js/bootstrap.bundle.min.js"></script>
+ <!-- script js -->
+ <script src="js/app.js"></script>
+
+ <script src="js/calendar.js"></script>
+
+ <script src="reg.js"></script>
+
+</body>
+
+</html>
